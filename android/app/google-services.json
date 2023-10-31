@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "295256088828",
+    "project_id": "movil2023a2",
+    "storage_bucket": "movil2023a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295256088828:android:2846d37940708d2f17f779",
+        "android_client_info": {
+          "package_name": "com.example.firebase_crud_estudiantes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295256088828-7cg4km6t03b9kan55frn3sgksnkqmmuq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBadaCMVCKc3w4SJbmK1r3KD5e8PnlcMag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295256088828-5pi58cn9r661j98djcnma3mqlj57ikrb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
 import 'package:firebase_crud_estudiantes/ui/pages/widget/input.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
@@ -32,7 +33,11 @@ class Login extends StatelessWidget {
               },
               child: const Text('Login'),
             ),
-            TextButton(onPressed: (){}, child: const Text('Crear Cuenta'))
+            TextButton(
+                onPressed: () {
+                  Get.offNamed('/registro');
+                },
+                child: const Text('Crear Cuenta'))
           ],
         ),
       ),
