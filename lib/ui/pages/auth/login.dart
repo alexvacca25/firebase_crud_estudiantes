@@ -1,3 +1,4 @@
+import 'package:firebase_crud_estudiantes/domain/controller/controllerUser.dart';
 import 'package:firebase_crud_estudiantes/ui/pages/widget/input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,6 +11,7 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ControlUserAuth cu = Get.find();
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -29,7 +31,17 @@ class Login extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Login logic here
+                cu
+                    .ingresarUser(emailController.text, passwordController.text)
+                    .then((value) {
+                  if (cu.userValido == null) {
+                    Get.snackbar("Usuarios", cu.mensajesUser,
+                        duration: const Duration(seconds: 4),
+                        backgroundColor: Colors.amber);
+                  } else {
+                    Get.offAllNamed('/home');
+                  }
+                });
               },
               child: const Text('Login'),
             ),

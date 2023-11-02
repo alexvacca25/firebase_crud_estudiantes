@@ -39,7 +39,17 @@ class Registro extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Registration logic here
-                cu.crearUser(emailController.text, passwordController.text);
+                cu
+                    .crearUser(emailController.text, passwordController.text)
+                    .then((value) {
+                  if (cu.userValido == null) {
+                    Get.snackbar("Usuarios", cu.mensajesUser,
+                        duration: const Duration(seconds: 4),
+                        backgroundColor: Colors.amber);
+                  } else {
+                    Get.offAllNamed('/home');
+                  }
+                });
               },
               child: const Text('Register'),
             ),

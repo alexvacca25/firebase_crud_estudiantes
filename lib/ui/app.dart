@@ -1,5 +1,6 @@
 import 'package:firebase_crud_estudiantes/ui/pages/auth/login.dart';
 import 'package:firebase_crud_estudiantes/ui/pages/auth/registro.dart';
+import 'package:firebase_crud_estudiantes/ui/pages/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/login": (context) => Login(),
-        "/registro": (context) => Registro()
+        "/registro": (context) => Registro(),
+        "/home": (context) => const HomePage()
       },
     );
   }

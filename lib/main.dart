@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crud_estudiantes/domain/controller/ControlFirestore.dart';
 import 'package:firebase_crud_estudiantes/domain/controller/controllerUser.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,6 +18,7 @@ void main() async {
               messagingSenderId: "295256088828",
               appId: "1:295256088828:web:66450a2bdcd2fa6f17f779"))
       : await Firebase.initializeApp();
+  Get.put(ControlUserPerfil());
   Get.put(ControlUserAuth());
   runApp(const MyApp());
 }
